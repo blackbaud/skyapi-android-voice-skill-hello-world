@@ -1,0 +1,10 @@
+{
+    "prod": {
+        "sky_api_subscription_key": "",
+        "sky_api_access_token": ""
+    },
+    "dev": {
+        "sky_api_subscription_key": "",
+        "sky_api_access_token": ""
+    }
+}

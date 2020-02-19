@@ -4,16 +4,11 @@ This repository contains the code for an app that demonstrates how to use the An
 Assistant with Blackbaud SKY. This is exploratory and I encountered some limitations with
 what is currently possible.
 
-This is a native Androud application written in Java and tested on API 28.
-
 Author: [Steven Draugel](https://github.com/sdraugel)
 
 ## What it has/does
 
-1. An Android Assistant intent to look up a constituent by name - this displays a view with the profile picture, display name, address and phone number.
-1. Ability to look up constituents from within the app.
-1. Implements Blackbaud OAuth to login, logout, and refresh the access token when expired.
-1. Includes some [SKY UX](https://developer.blackbaud.com/skyux/) styling so the app look matches the site users are familiar with, and follows Blackbaud style guidelines.
+1. An Android Assistant agent that looks up a constituent by name - this displays a view with the profile picture, display name, address and phone number.
 
 <p align="center">
     <img height="500" src="./Screenshots/StartSearch.png"> 

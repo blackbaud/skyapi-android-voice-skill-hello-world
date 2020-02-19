@@ -72,7 +72,7 @@ Prerequisites:
         1. Click Add Application
         1. Enter your Application ID and click Save
 1. Get your auth code and subscription key:
-    1. Go to the SKI Api endpoint you are wanting to use and look for Blackbaud OAuth 2.0 Service. 
+    1. Go to the SKI API endpoint you are wanting to use and look for Blackbaud OAuth 2.0 Service. 
     1. Select Authorization code and follow the prompts. 
     1. Note the Authorization code and Subscription key
 1. Create a file called [access-keys.xml](./functions/access-keys.json.xml), set the following properties:
@@ -86,7 +86,10 @@ Prerequisites:
 
 ### Debugging
 
-1. Open the Firebase console, select Functions, and select your function. Here you'll be able to see all the logs from your webhook.
+1. Open the Firebase console.
+1. Select Functions.
+1. Select your function. 
+    1. Here you'll be able to see all the logs from your webhook.
 
 ## Usage
 

@@ -34,14 +34,15 @@ exports.dialogflowWebhook = functions.https.onRequest(async (request, response) 
     let searchText = request.body.queryResult.queryText;
     const subscriptionKey = skyApiAccount.dev.sky_api_subscription_key;
     const authToken = skyApiAccount.dev.sky_api_access_token;
+    const phoneNumber = "(843) 555-1234";
 
 
     function buildResponse(title, address) {
         if (address !== null && address !== "") {
-            return title + ". Their address is " + address + ". Their phone number is (555) 555-5555."
+            return title + ". Their address is " + address + ". Their phone number is " + phoneNumber + ".";
         }
         else {
-            return title + ". Their phone number is (555) 555-5555."
+            return title + ". Their phone number is " + phoneNumber + ".";
         }
     }
 
@@ -73,13 +74,24 @@ exports.dialogflowWebhook = functions.https.onRequest(async (request, response) 
                 request(options, function (error, response, body) {
                     constitImageResponse = JSON.parse(body);
                 }).then(() => {
-                    // Card
-                    agent.add(new Card({
-                        title: title,
-                        imageUrl: constitImageResponse.url,
-                        text: address + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n (555) 555-5555"
-                    })
-                    );
+                    if (address !== null && address !== "") {
+                        // Card
+                        agent.add(new Card({
+                            title: title,
+                            imageUrl: constitImageResponse.url,
+                            text: "Address: " + "\n\n" + address + "\n\n" + "Phone Number: " + "\n\n" + phoneNumber
+                        })
+                        );
+                    } else {
+                        // Card
+                        agent.add(new Card({
+                            title: title,
+                            imageUrl: constitImageResponse.url,
+                            text: "Phone Number: " + "\n\n" + phoneNumber
+                        })
+                        );
+                    }
+
 
                     // Basic text response for smart speakers
                     agent.add(buildResponse(title, address));

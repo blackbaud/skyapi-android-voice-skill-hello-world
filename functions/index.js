@@ -38,10 +38,10 @@ exports.dialogflowWebhook = functions.https.onRequest(async (request, response) 
 
     function buildResponse(title, address) {
         if (address !== null && address !== "") {
-            return title + ". Their address is " + address + ". Their phone number is (555) 555-5555."
+            return title + ". Their address is " + address + ". Their phone number is (843) 555-1234."
         }
         else {
-            return title + ". Their phone number is (555) 555-5555."
+            return title + ". Their phone number is (843) 555-1234."
         }
     }
 

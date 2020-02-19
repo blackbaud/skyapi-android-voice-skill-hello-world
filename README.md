@@ -48,7 +48,8 @@ I created an agent using Google's dialog flow and trained it to:
 ## Additions wanted (contributions welcome)
 
 1. Greater conversation flexibility which allow for more fluid agent interactions 
-1. Figure out a way to authenticate with SKY Api.
+1. Figure out a way to authenticate with Blackbaud OAuth.
+    1. I would like to be able to use the [Android Voice App](https://github.com/blackbaud/skyapi-android-voice-hello-world) to handle authentication.
 1. Format visual responses using SKY UX styling
 1. Unit tests
 1. Localization

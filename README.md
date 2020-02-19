@@ -65,22 +65,23 @@ Prerequisites:
 
 1. Set up your SKY application
     1. Go to [SKY Developer](https://developer.blackbaud.com/apps/) and create an application
-    1. Note the application ID and secret
-    1. Add a redirect URI `https://host.nxt.blackbaud.com/app-redirect/redirect-androiddemo/android-deeplink`
-    1. In file [strings.xml](./app/src/main/res/values/strings.xml), set the following properties:
-    ```xml 
-    <string name="subscriptionKey"></string>
-    <string name="clientId"></string>
-    <string name="redirectUri"></string>
-    <string name="clientSecret"></string>
-    ```
-        * Note that the clientSecret is intended to be kept secret and this value should not be 
-        included in a production app
     1. Add the application to an environment
         1. Go to the home page of environment where you are an environment admin
         1. Go to Control Panel > Applications
         1. Click Add Application
         1. Enter your Application ID and click Save
+1. Get your auth code and subscription key:
+    1. Go to the SKI Api endpoint you are wanting to use and look for Blackbaud OAuth 2.0 Service. 
+    1. Select Authorization code and follow the prompts. 
+    1. Note the Authorization code and Subscription key
+1. Create a file called [access-keys.xml](./functions/access-keys.json.xml), set the following properties:
+    ```json
+    {
+        "sky_api_subscription_key": "Bearer <your auth code>",
+        "sky_api_access_token": "<your subscription key>"
+    }
+    ```
+        * Note that these keys are intended to be kept secrect and should not be included in a production release.
 
 ### Debugging
 

@@ -18,7 +18,7 @@ Author: [Steven Draugel](https://github.com/sdraugel)
 <p align="center">
     <img height="500" src="./Screenshots/StartSearch.png"> 
     <p align="center">
-        <i>Kick of the constituent search agent</i>
+        <i>Kick off the constituent search agent</i>
      </p>
 </p>
 

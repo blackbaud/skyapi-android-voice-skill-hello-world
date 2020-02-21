@@ -78,8 +78,8 @@ Prerequisites:
 1. Create a file called [access-keys.xml](./functions/access-keys.json.xml), set the following properties:
     ```json
     {
-        "sky_api_subscription_key": "Bearer <your auth code>",
-        "sky_api_access_token": "<your subscription key>"
+        "sky_api_subscription_key": "<your subscription key>",
+        "sky_api_access_token": "Bearer <your auth code>"
     }
     ```
         * Note that these keys are intended to be kept secrect and should not be included in a production release.
